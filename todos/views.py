@@ -4,9 +4,9 @@ from .models import Todo
 from django.shortcuts import render,redirect
 
 def index(request):
-    todos = Todo.objects.all()[:10]
+    todo_s = Todo.objects.all()[:10]
     context = {
-        'todos':todos
+        'todo_s':todo_s
     }
     return render(request, 'index.html', context)
 

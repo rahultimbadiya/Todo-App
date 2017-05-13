@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'todolist.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'todolist',
         'USER':'root',
         'PASSWORD':'root@123',
-        'HOST':'',
+        'HOST':'localhost',
         'PORT':'',
     }
 }

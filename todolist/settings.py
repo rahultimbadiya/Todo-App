@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'todolist.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'todolist',
@@ -83,7 +83,8 @@ DATABASES = {
         'HOST':'localhost',
         'PORT':'5432',
     }
-}
+}'''
+DATABASES = {'default': dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_SILVER_URL"])}
 
 
 # Password validation
